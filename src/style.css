@@ -4,20 +4,40 @@
 	padding: 0px;
 	box-sizing: border-box;
 	font-family: "Satisfy", cursive;
-	font-size: 26px;
+}
+html {
+    font-size: 26px;
+}
+
+#content,
+.header,
+body,
+html {
+	height: 100%;
+}
+
+.header {
+	background: url("./assets/indian-food-bg.jpg") no-repeat;
+	background-position: center center;
+	background-size: cover;
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: 100px auto;
 }
 
 .navigation {
-    display: grid;
-    justify-items: center;
-    background: #a1e9ff;
-    height: 80px;
+	display: grid;
+	justify-items: center;
+	height: 100px;
+	z-index: 3;
+	border-bottom: 1px solid white;
+	background-color: #0000004f;
 }
 
 .navigation ul {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
+	align-items: center;
 }
 
 .navigation ul li {
@@ -25,7 +45,37 @@
 }
 
 .navigation ul li a {
-    text-decoration: none;
-    padding: 30px;
-    color: #0c78bb;
+	text-decoration: none;
+	padding: 30px;
+	color: #0c78bb;
+	font-weight: 600;
+}
+
+#content {
+	display: flex;
+	flex-direction: column;
+}
+
+.heading-section h1 {
+    color: white;
+    font-size: 80px;
+    font-weight: 500;
+    color: #f9ad43;
+}
+
+.heading-section {
+    display: grid;
+    grid-template-rows: 70% 10%;
+    justify-items: center;
+    align-items: center;
+    background-color: #8080804a;
+}
+
+.heading-section button {
+    border-radius: 11px;
+    height: 75px;
+    font-size: 40px;
+    padding: 9px 70px;
+    background: #0c78bb;
+    color: #f9ad43;
 }
