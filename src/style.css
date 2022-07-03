@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: "Satisfy", cursive;
+	font-size: 26px;
+}
+
+.navigation {
+    display: grid;
+    justify-items: center;
+    background: #a1e9ff;
+    height: 80px;
+}
+
+.navigation ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.navigation ul li {
+	list-style: none;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    padding: 30px;
+    color: #0c78bb;
+}
