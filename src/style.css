@@ -6,7 +6,7 @@
 	font-family: "Satisfy", cursive;
 }
 html {
-    font-size: 26px;
+	font-size: 26px;
 }
 
 #content,
@@ -22,14 +22,14 @@ html {
 	background-size: cover;
 	min-height: 100%;
 	display: grid;
-	grid-template-rows: 100px auto;
+	grid-template-rows: 12vh auto;
 }
 
 .navigation {
 	display: grid;
 	justify-items: center;
-	height: 100px;
 	z-index: 3;
+	height: 12vh;
 	border-bottom: 1px solid white;
 	background-color: #0000004f;
 }
@@ -46,9 +46,15 @@ html {
 
 .navigation ul li a {
 	text-decoration: none;
-	padding: 30px;
+	padding: 0px 40px;
 	color: #0c78bb;
 	font-weight: 600;
+	font-size: clamp(25px, 3vw, 48px);
+}
+
+.navigation ul li a:hover {
+	border-bottom: 4px solid #f9ad43;
+	border-radius: 50px;
 }
 
 #content {
@@ -56,26 +62,62 @@ html {
 	flex-direction: column;
 }
 
-.heading-section h1 {
-    color: white;
-    font-size: 80px;
-    font-weight: 500;
-    color: #f9ad43;
+.heading-section {
+	display: grid;
+	grid-template-rows: 65% 20%;
+	justify-items: center;
+	align-items: center;
+	background-color: #8080804a;
 }
 
-.heading-section {
-    display: grid;
-    grid-template-rows: 70% 10%;
-    justify-items: center;
-    align-items: center;
-    background-color: #8080804a;
+.heading-section h1 {
+	color: white;
+	font-size: clamp(80px, 7vw, 140px);
+	font-weight: 500;
+	color: #f9ad43;
 }
 
 .heading-section button {
-    border-radius: 11px;
-    height: 75px;
-    font-size: 40px;
-    padding: 9px 70px;
-    background: #0c78bb;
-    color: #f9ad43;
+	border-radius: 13px;
+	font-size: clamp(40px, 3vw, 75px);
+	padding: 8px clamp(60px, 4vw, 100px);
+	background: #0c78c3;
+	color: #f9ad43;
+	cursor: pointer;
+}
+
+.heading-section button:hover {
+	background: #0c78bb;
+	font-weight: bold;
+}
+
+.about-section {
+	min-height: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1.5fr;
+}
+
+.about-section div:nth-child(1) {
+	background: url(http://localhost:8080/d644ceff33ce8526dfed.jpg) no-repeat;
+	background-position: center center;
+	background-size: cover;
+	border-right: 23px solid #f9ad43;
+	border-bottom: 23px solid #f9ad43;
+}
+
+.about-section div:nth-child(2) {
+	padding: 10px 50px;
+	display: grid;
+	width: 55vw;
+}
+
+.about-section div:nth-child(2) h2 {
+	font-size: clamp(60px, 6vw, 110px);
+
+	margin-bottom: 15px;
+	color: #0c78bb;
+}
+
+.about-section div:nth-child(2) p {
+	font-size: clamp(20px, 3vw, 40px);
 }
