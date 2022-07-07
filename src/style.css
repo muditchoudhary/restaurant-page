@@ -40,16 +40,16 @@ html {
 	align-items: center;
 }
 
-.navigation ul li {
-	list-style: none;
+.navigation ul li, .upper-footer div ul li {
+    list-style: none;
 }
 
-.navigation ul li a {
-	text-decoration: none;
-	padding: 0px 40px;
-	color: #0c78bb;
-	font-weight: 600;
-	font-size: clamp(25px, 3vw, 48px);
+.navigation ul li a, .upper-footer div ul li a {
+    text-decoration: none;
+    padding: 0px 40px;
+    color: #0c78bb;
+    font-weight: 600;
+    font-size: clamp(25px, 3vw, 48px);
 }
 
 .navigation ul li a:hover {
@@ -98,7 +98,7 @@ html {
 }
 
 .about-section div:nth-child(1) {
-	background: url(http://localhost:8080/d644ceff33ce8526dfed.jpg) no-repeat;
+	background: url("./assets/indian-restro.jpg") no-repeat;
 	background-position: center center;
 	background-size: cover;
 	border-right: 23px solid #f9ad43;
@@ -108,7 +108,7 @@ html {
 .about-section div:nth-child(2) {
 	padding: 10px 50px;
 	display: grid;
-	width: 55vw;
+	grid-template-rows: 0.1fr 1fr;
 }
 
 .about-section div:nth-child(2) h2 {
@@ -119,5 +119,63 @@ html {
 }
 
 .about-section div:nth-child(2) p {
-	font-size: clamp(20px, 3vw, 40px);
+	font-size: clamp(20px, 2.5vw, 40px);
+}
+
+.footer {
+    display: flex;
+    background: white;
+    border-top: 1px solid gray;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.footer {
+    display: flex;
+    background: #ededed;
+    border-top: 2px solid black;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.upper-footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    border-bottom: 1px solid black;
+}
+
+.upper-footer div:nth-child(2) {
+    justify-self: center;
+    font-size: clamp(25px, 2.5vw, 48px);
+}
+
+.upper-footer div:nth-child(3) {
+    justify-self: end;
+}
+
+.upper-footer div h3 {
+    color: #f9ad43;
+    font-size: clamp(40px, 4vw, 65px);
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.upper-footer div ul li a {
+    padding: 0px;
+    font-weight: 400;
+    font-size: clamp(25px, 2.5vw, 48px);
+    color: black;
+}
+
+.upper-footer div ul li a:hover {
+    color: #0c78bb;
+}
+
+.lower-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(25px, 2.5vw, 48px);
 }
