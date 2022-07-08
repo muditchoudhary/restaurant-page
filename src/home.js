@@ -1,21 +1,11 @@
-import twitterIcon from "./assets/twitter.png";
-import linkedinIcon from "./assets/linkedin.png";
-import githubIcon from "./assets/github-sign.png";
-
 function pageLoad(parent) {
 	// header html
 	const header = document.createElement("div");
 	header.classList.add("header");
 
-	// Navigation bar html
-	const navBar = document.createElement("div");
-	const uoList = document.createElement("ul");
-	navBar.classList.add("navigation");
 	const navLinkTexts = ["Home", "Menu", "Contact"];
-	createSectionLinks(navLinkTexts, uoList);
 
-	navBar.appendChild(uoList);
-	header.appendChild(navBar);
+	header.appendChild(createNavBar(navLinkTexts));
 
 	// Restaurant heading html
 	const headingSection = document.createElement("div");
@@ -54,6 +44,34 @@ function pageLoad(parent) {
 	parent.appendChild(aboutUsSection);
 
 	// Footer section
+	
+
+	parent.appendChild(createFooter(navLinkTexts));
+}
+
+function createNavBar(navLinkTexts) {
+	const navBar = document.createElement("div");
+	const uoList = document.createElement("ul");
+	navBar.classList.add("navigation");
+	createSectionLinks(navLinkTexts, uoList);
+	navBar.appendChild(uoList);
+
+	return navBar;
+}
+
+function createSectionLinks(list, parentList) {
+	list.forEach((text, i) => {
+		let li = document.createElement("li");
+		let link = document.createElement("a");
+		link.href = "#";
+		link.innerText = text;
+		link.setAttribute("id", text);
+		li.appendChild(link);
+		parentList.appendChild(li);
+	});
+}
+
+function createFooter(navLinkTexts) {
 	const footerSection = document.createElement("div");
 	footerSection.classList.add("footer");
 
@@ -89,29 +107,16 @@ function pageLoad(parent) {
 	timingSection.appendChild(timingH3);
 	timingSection.appendChild(timingDetails);
 
-	lowerPart.innerText =
-		"\u00A9 2022 The Indian Masala. All Right Reserved";
+	lowerPart.innerText = "\u00A9 2022 The Indian Masala. All Right Reserved";
 
 	upperPart.appendChild(linksSection);
 	upperPart.appendChild(addressSection);
 	upperPart.appendChild(timingSection);
 
-
 	footerSection.appendChild(upperPart);
 	footerSection.appendChild(lowerPart);
 
-	parent.appendChild(footerSection);
+	return footerSection;
 }
 
-function createSectionLinks(list, parentList) {
-	list.forEach((text, i) => {
-		let li = document.createElement("li");
-		let link = document.createElement("a");
-		link.href = "https://www.google.com/";
-		link.innerText = text;
-		li.appendChild(link);
-		parentList.appendChild(li);
-	});
-}
-
-export { pageLoad };
+export { pageLoad, createNavBar, createFooter };

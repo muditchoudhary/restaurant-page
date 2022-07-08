@@ -40,16 +40,18 @@ html {
 	align-items: center;
 }
 
-.navigation ul li, .upper-footer div ul li {
-    list-style: none;
+.navigation ul li,
+.upper-footer div ul li {
+	list-style: none;
 }
 
-.navigation ul li a, .upper-footer div ul li a {
-    text-decoration: none;
-    padding: 0px 40px;
-    color: #0c78bb;
-    font-weight: 600;
-    font-size: clamp(25px, 3vw, 48px);
+.navigation ul li a,
+.upper-footer div ul li a {
+	text-decoration: none;
+	padding: 0px 40px;
+	color: #0c78bb;
+	font-weight: 600;
+	font-size: clamp(25px, 3vw, 48px);
 }
 
 .navigation ul li a:hover {
@@ -123,59 +125,102 @@ html {
 }
 
 .footer {
-    display: flex;
-    background: white;
-    border-top: 1px solid gray;
-    flex-direction: column;
-    padding: 10px;
+	display: flex;
+	background: white;
+	border-top: 1px solid gray;
+	flex-direction: column;
+	padding: 10px;
 }
 
 .footer {
-    display: flex;
-    background: #ededed;
-    border-top: 2px solid black;
-    flex-direction: column;
-    padding: 10px;
-    margin-top: 30px;
-    gap: 15px;
+	display: flex;
+	background: #ededed;
+	border-top: 2px solid black;
+	flex-direction: column;
+	padding: 10px;
+	margin-top: 30px;
+	gap: 15px;
 }
 
 .upper-footer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    border-bottom: 1px solid black;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	border-bottom: 1px solid black;
 }
 
 .upper-footer div:nth-child(2) {
-    justify-self: center;
-    font-size: clamp(25px, 2.5vw, 48px);
+	justify-self: center;
+	font-size: clamp(25px, 2.5vw, 48px);
 }
 
 .upper-footer div:nth-child(3) {
-    justify-self: end;
+	justify-self: end;
 }
 
 .upper-footer div h3 {
-    color: #f9ad43;
-    font-size: clamp(40px, 4vw, 65px);
-    border-bottom: 1px solid black;
-    margin-bottom: 10px;
+	color: #f9ad43;
+	font-size: clamp(40px, 4vw, 65px);
+	border-bottom: 1px solid black;
+	margin-bottom: 10px;
 }
 
 .upper-footer div ul li a {
-    padding: 0px;
-    font-weight: 400;
-    font-size: clamp(25px, 2.5vw, 48px);
-    color: black;
+	padding: 0px;
+	font-weight: 400;
+	font-size: clamp(25px, 2.5vw, 48px);
+	color: black;
 }
 
 .upper-footer div ul li a:hover {
-    color: #0c78bb;
+	color: #0c78bb;
 }
 
 .lower-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: clamp(25px, 2.5vw, 48px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: clamp(25px, 2.5vw, 48px);
+}
+
+/* Menu tab styling */
+.menu-container {
+	display: grid;
+	grid-template-rows: 12vh auto;
+}
+
+.menu {
+	border: 1px solid black;
+	width: 80vw;
+	box-shadow: 15px 16px 14px -12px #000000, -9px -8px 14px -10px;
+	justify-self: center;
+	margin-top: 5vh;
+	border-radius: 15px;
+	padding: 40px;
+	height: 77vh;
+	overflow: scroll;
+	margin-bottom: 5vh;
+}
+
+.menu h1 {
+	color: #f9ad43;
+	font-size: clamp(65px, 7vw, 110px);
+	padding: 25px 10px;
+}
+
+.item {
+	margin-bottom: 40px;
+}
+
+.item h2 {
+	color: #0c78bb;
+	font-size: clamp(45px, 4vw, 70px);
+	border-bottom: 1px solid black;
+	padding: 12px 0px;
+}
+
+.item p {
+	font-size: clamp(25px, 2.5vw, 40px);
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 0px;
 }
