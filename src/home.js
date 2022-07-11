@@ -119,4 +119,5 @@ function createFooter(navLinkTexts) {
 	return footerSection;
 }
 
+
 export { pageLoad, createNavBar, createFooter };
