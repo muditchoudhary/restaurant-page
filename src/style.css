@@ -188,17 +188,26 @@ html {
 	grid-template-rows: 12vh auto;
 }
 
+.menu-container .navigation {
+    background: #ffb24e;
+}
+
+.menu-container .navigation ul li a:hover {
+    border-bottom: 4px solid #0c78bb;
+}
+
 .menu {
-	border: 1px solid black;
-	width: 80vw;
-	box-shadow: 15px 16px 14px -12px #000000, -9px -8px 14px -10px;
-	justify-self: center;
-	margin-top: 5vh;
-	border-radius: 15px;
-	padding: 40px;
-	height: 77vh;
-	overflow: scroll;
-	margin-bottom: 5vh;
+    border: 1px solid black;
+    width: 80vw;
+    box-shadow: 17px 17px 25px -8px #ffb24e, -17px -17px 25px -8px #ffb24e;
+    justify-self: center;
+    margin-top: 5vh;
+    border-radius: 25px;
+    padding: 40px;
+    height: 77vh;
+    overflow: scroll;
+    margin-bottom: 5vh;
+    background: #fed8c9;
 }
 
 .menu h1 {
