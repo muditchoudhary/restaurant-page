@@ -7,9 +7,7 @@ const parent = document.querySelector("#content");
 const pageSwitchLinks = [];
 let currentPage = "Home";
 
-// pageLoad(parent);
-// loadMenu(parent);
-loadContactPage(parent);
+pageLoad(parent);
 
 addClickEventOnLinks();
 
