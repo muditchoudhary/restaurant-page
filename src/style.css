@@ -186,28 +186,24 @@ html {
 .menu-container {
 	display: grid;
 	grid-template-rows: 12vh auto;
-}
-
-.menu-container .navigation {
-	background: #ffb24e;
-}
-
-.menu-container .navigation ul li a:hover {
-	border-bottom: 4px solid #0c78bb;
+	background: url("./assets/indian-food-bg.jpg") no-repeat;
+	background-position: center center;
+	background-size: cover;
 }
 
 .menu {
-	border: 1px solid black;
-	width: 80vw;
-	box-shadow: 17px 17px 25px -8px #ffb24e, -17px -17px 25px -8px #ffb24e;
-	justify-self: center;
-	margin-top: 5vh;
-	border-radius: 25px;
-	padding: 40px;
-	height: 77vh;
-	overflow: scroll;
-	margin-bottom: 5vh;
-	background: #fed8c9;
+    border: 1px solid black;
+    width: 80vw;
+    justify-self: center;
+    margin-top: 5vh;
+    border-radius: 25px;
+    padding: 40px;
+    height: 77vh;
+    overflow: scroll;
+    margin-bottom: 5vh;
+    background-color: #efeaea4a;
+    border: 1px solid black;
+    box-shadow: 3px 3px 7px black;
 }
 
 .menu h1 {
@@ -243,9 +239,9 @@ html {
 }
 
 .contact-container {
-    display: flex;
-    padding: 20px 0px;
-    background-color: #efeaea4a;
+	display: flex;
+	padding: 20px 0px;
+	background-color: #efeaea4a;
 }
 
 .contact-container .left {
@@ -261,16 +257,16 @@ html {
 }
 
 .left h1 {
-    border-bottom: 1px solid;
-    font-size: clamp(40px, 5vw, 80px);
-    color: #f9ad43;
+	border-bottom: 1px solid;
+	font-size: clamp(40px, 5vw, 80px);
+	color: #f9ad43;
 }
 
 .left h2 {
-    font-size: clamp(38px, 3vw, 60px);
-    margin-top: 10%;
-    margin-bottom: 2%;
-    color: #0c78bb;
+	font-size: clamp(38px, 3vw, 60px);
+	margin-top: 10%;
+	margin-bottom: 2%;
+	color: #0c78bb;
 }
 
 .left p {
@@ -289,14 +285,14 @@ form {
 }
 
 form ul {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    padding: 15px;
-    border: 1px solid black;
-    width: 90%;
-    padding: 50px;
-    box-shadow: 3px 3px 7px black;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding: 15px;
+	border: 1px solid black;
+	width: 90%;
+	padding: 50px;
+	box-shadow: 3px 3px 7px black;
 }
 
 form ul li {
@@ -310,12 +306,12 @@ form ul li label {
 }
 
 form ul li input {
-    font-size: clamp(25px, 2.5vw, 40px);
-    padding: 10px;
-    width: 70%;
-    border: 1px solid white;
-    color: white;
-    background: #00000069;
+	font-size: clamp(25px, 2.5vw, 40px);
+	padding: 10px;
+	width: 70%;
+	border: 1px solid white;
+	color: white;
+	background: #00000069;
 }
 
 form ul li textarea {
