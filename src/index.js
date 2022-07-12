@@ -1,13 +1,15 @@
 import { pageLoad } from "./home";
 import { loadMenu } from "./menu";
+import { loadContactPage } from "./contact";
 import "./style.css";
 
 const parent = document.querySelector("#content");
 const pageSwitchLinks = [];
 let currentPage = "Home";
 
-pageLoad(parent);
+// pageLoad(parent);
 // loadMenu(parent);
+loadContactPage(parent);
 
 addClickEventOnLinks();
 
@@ -27,40 +29,43 @@ function addClickEventOnLinks() {
 function switchTab(e) {
 	if (e.target.getAttribute("id") === "Home") {
 		if (currentPage === "Menu") {
-			console.log("sdfh");
-			// Remove contens of menu page
 			clearPage();
-			// Add contents of home page
 			pageLoad(parent);
 			addClickEventOnLinks();
 			currentPage = "Home";
 		} else if (currentPage === "Contact") {
-			// Remove contens of home page
-			// Add contents of menu page
+			clearPage();
+			pageLoad(parent);
+			addClickEventOnLinks();
+			currentPage = "Home";
 		} else {
 			return;
 		}
 	} else if (e.target.getAttribute("id") === "Menu") {
 		if (currentPage === "Home") {
-			// Remove contens of home page
 			clearPage();
-			// Add contents of menu page
 			loadMenu(parent);
 			addClickEventOnLinks();
 			currentPage = "Menu";
 		} else if (currentPage === "Contact") {
-			// Remove contens of home page
-			// Add contents of menu page
+			clearPage();
+			loadMenu(parent);
+			addClickEventOnLinks();
+			currentPage = "Menu";
 		} else {
 			return;
 		}
 	} else if (e.target.getAttribute("id") === "Contact") {
 		if (currentPage === "Home") {
-			// Remove contens of home page
-			// Add contents of menu page
+			clearPage();
+			loadContactPage(parent);
+			addClickEventOnLinks();
+			currentPage = "Contact";
 		} else if (currentPage === "Menu") {
-			// Remove contens of home page
-			// Add contents of menu page
+			clearPage();
+			loadContactPage(parent);
+			addClickEventOnLinks();
+			currentPage = "Contact";
 		} else {
 			return;
 		}
